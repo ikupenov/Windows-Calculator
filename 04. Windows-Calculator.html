@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="WindowsCalculator.css">
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div id="Outer">
+        <span id="TopLeft">
+            <img src="thumbnail.png" alt="Icon">
+            Calculator
+        </span>
+
+        <div id="MMC-BT">
+            <button id="Minimize-BT"><img src="MinimizeBT.jpg" alt=""> </button><!--
+            --><button id="Maximize-BT"><img src="MaximizeBT.jpg" alt=""></button><!--
+            --><button id="Close-BT"><img src="CloseBT.jpg" alt=""> </button>
+        </div>
+
+        <div id="Inner">
+            <div id="Options">
+                <ul>
+                    <li><a href="#">View</a></li>
+                    <li><a href="#">Edit</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+
+            <input id="ResultBox" type="text" placeholder="8854455"> </input>
+
+            <div id="Binary">
+                <table>
+                    <tr>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>0000</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">63</td>
+                        <td colspan="3">47</td>
+                        <td class="rightAlign">32</td>
+                    </tr>
+                    <tr>
+                        <td>0000</td>
+                        <td>0000</td>
+                        <td>1000</td>
+                        <td>0111</td>
+                        <td>0001</td>
+                        <td>1011</td>
+                        <td>1011</td>
+                        <td>0111</td>
+                    </tr>
+
+                    <tr id="LastRow">
+                        <td colspan="4">31</td>
+                        <td colspan="3">15</td>
+                        <td class="rightAlign">0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="NumBoxes" id="Numeral-Systems">
+                <input type="radio" name="numeral" value="hex"> Hex<br>
+                <input type="radio" name="numeral" value="dec" checked> Dec<br>
+                <input type="radio" name="numeral" value="oct"> Oct<br>
+                <input type="radio" name="numeral" value="bin"> Bin
+            </div>
+
+            <div class="NumBoxes" id="NumSys-Size">
+                <input type="radio" name="size" value="qword" checked> Qword<br>
+                <input type="radio" name="size" value="dword"> Dword<br>
+                <input type="radio" name="size" value="word"> Word<br>
+                <input type="radio" name="size" value="byte"> Byte
+            </div>
+
+            <div id="Functions">
+                <table>
+                    <tr>
+                        <td><button class="flat_gray"> </button></td>
+                        <td><button class="grd_white-gray">Mod</button></td>
+                        <td><button class="flat_gray">A</button></td>
+                        <td><button class="flat_white-gray">MC</button></td>
+                        <td><button class="flat_white-gray">MR</button></td>
+                        <td><button class="flat_white-gray">MS</button></td>
+                        <td><button class="flat_white-gray">M+</button></td>
+                        <td><button class="flat_white-gray">M-</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="grd_white-gray">(</button></td>
+                        <td><button class="grd_white-gray">)</button></td>
+                        <td><button class="flat_gray">B</button></td>
+                        <td><button class="grd_white-gray"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></button></td>
+                        <td><button class="grd_white-gray">CE</button></td>
+                        <td><button class="grd_white-gray">C</button></td>
+                        <td><button class="grd_white-gray">&plusmn;</button></td>
+                        <td><button class="flat_gray">&Sqrt;</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="grd_white-gray">RoL</button></td>
+                        <td><button class="grd_white-gray">RoR</button></td>
+                        <td><button class="flat_gray">C</button></td>
+                        <td><button class="numbers">7</button></td>
+                        <td><button class="numbers">8</button></td>
+                        <td><button class="numbers">9</button></td>
+                        <td><button class="grd_white-gray">/</button></td>
+                        <td><button class="flat_gray">%</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="grd_white-gray">Or</button></td>
+                        <td><button class="grd_white-gray">Xor</button></td>
+                        <td><button class="flat_gray">D</button></td>
+                        <td><button class="numbers">4</button></td>
+                        <td><button class="numbers">5</button></td>
+                        <td><button class="numbers">6</button></td>
+                        <td><button class="grd_white-gray">*</button></td>
+                        <td><button class="flat_gray">1/&xscr;</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="grd_white-gray">Lsh</button></td>
+                        <td><button class="grd_white-gray">Rsh</button></td>
+                        <td><button class="flat_gray">E</button></td>
+                        <td><button class="numbers">1</button></td>
+                        <td><button class="numbers">2</button></td>
+                        <td><button class="numbers">3</button></td>
+                        <td><button class="grd_white-gray">-</button></td>
+                        <td rowspan="2"><button id="Equals" class="grd_white-gray">=</button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button class="grd_white-gray">Not</button></td>
+                        <td><button class="grd_white-gray">And</button></td>
+                        <td><button class="flat_gray">F</button></td>
+                        <td colspan="2"><button class="numbers">0</button></td>
+                        <td><button class="flat_gray">.</button></td>
+                        <td><button class="grd_white-gray">+</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
