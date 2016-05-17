@@ -272,7 +272,7 @@ body div div button {
                 color: #313B56;
             }
             
-            #Functions table tr td button:hover {
+            .grd_white-gray:hover, .numbers:hover, .flat_white-gray:hover {
                 background-image: -ms-linear-gradient(top, #ECF1F8 0%, #ecf1f8 100%);
                 background-image: -moz-linear-gradient(top, #ECF1F8 0%, #ecf1f8 100%);
                 background-image: -o-linear-gradient(top, #ECF1F8 0%, #ecf1f8 100%);
